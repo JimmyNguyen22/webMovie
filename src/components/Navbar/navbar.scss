@@ -1,0 +1,16 @@
+@import "../../App.scss";
+
+.navbar {
+  transition: all 0.5s linear;
+  .navContainer {
+    color: green !important;
+    .navSearch {
+      .iconSearch {
+      }
+      input {
+        transition: width 0.5s linear;
+        background-color: $bg-dark;
+      }
+    }
+  }
+}

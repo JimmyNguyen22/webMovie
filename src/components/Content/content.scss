@@ -1,0 +1,24 @@
+@import "../../App.scss";
+
+.content {
+  color: $color-light;
+  padding: 20px 20px 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .heading {
+    font-size: 18px;
+    user-select: none;
+  }
+  .movieSlider {
+    display: grid;
+    gap: 6px;
+    transition: all 0.3s linear;
+    user-select: none;
+    overflow: hidden;
+    .movieItem {
+      .movieName {
+      }
+    }
+  }
+}

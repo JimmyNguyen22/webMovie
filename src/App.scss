@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+$color-light: rgb(220, 218, 218);
+$bg-dark: rgb(17, 17, 17);
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: $bg-dark;
+}
