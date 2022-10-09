@@ -1,0 +1,10 @@
+export const GET_FILM_ORIGINALS = "GET_FILM_ORIGINALS";
+export const GET_TRENDING = "GET_TRENDING";
+export const GET_TOP_RATED = "GET_TOP_RATED";
+export const GET_ACTION = "GET_ACTION";
+export const GET_COMEDY = "GET_COMEDY";
+export const GET_HORROR = "GET_HORROR";
+export const GET_ROMANCE = "GET_ROMANCE";
+export const GET_DOCUMENTARIES = "GET_DOCUMENTARIES";
+
+export const SET_MOVIE_DETAIL = "SET_MOVIE_DETAIL";

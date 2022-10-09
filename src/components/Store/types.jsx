@@ -1,1 +1,0 @@
-export const GET_FILM_ORIGINALS = "GET_FILM_ORIGINALS";

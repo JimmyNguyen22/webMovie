@@ -2,7 +2,7 @@ import React from "react";
 import loGo from "../../assets/img/logo-full.png";
 import { FiSearch } from "react-icons/fi";
 import "./navbar.scss";
-import useScrollY from "../hooks/useScrollY";
+import { useScrollY } from "../hooks/useScrollY";
 
 export default function Navbar(props) {
   const [scrollY] = useScrollY();

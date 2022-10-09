@@ -1,14 +1,19 @@
 import "./App.scss";
-import Contents from "./components/Content/Contents";
-import Intro from "./components/Intro/Intro";
 import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Search from "./components/Pages/Search";
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <Intro></Intro>
-      <Contents></Contents>
+      <BrowserRouter>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/search" element={<Search></Search>}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

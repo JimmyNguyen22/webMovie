@@ -1,8 +1,7 @@
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function useViewport() {
+export const useViewport = () => {
   const [windowWidth, setWindowWidth] = useState(
     window.innerWidth || document.documentElement.clientWidth
   );
@@ -20,4 +19,4 @@ export default function useViewport() {
   }, []);
 
   return [windowWidth];
-}
+};

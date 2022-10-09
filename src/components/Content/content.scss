@@ -1,0 +1,16 @@
+.goTop {
+  position: fixed;
+  z-index: 10;
+  right: 70px;
+  bottom: 50px;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s linear;
+  &:hover {
+    color: white;
+  }
+
+  @media screen and (max-width: 600px) {
+    right: 40px;
+  }
+}

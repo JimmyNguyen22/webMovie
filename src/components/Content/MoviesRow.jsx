@@ -4,7 +4,9 @@ import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { useRef } from "react";
 import { SmoothHorizontalScrolling } from "../../utils/scrollSmooth";
 import { useEffect } from "react";
-import useViewport from "../hooks/useViewport";
+import { useViewport } from "../hooks/useViewport";
+import { useDispatch } from "react-redux";
+import { setMovieDetail } from "../Store/actions/action";
 
 export default function MoviesRow(props) {
   const { movies, title, isOrigin } = props;
@@ -14,6 +16,12 @@ export default function MoviesRow(props) {
   const [dragMove, setDragMove] = useState(0);
   const [isDrag, setIsDrag] = useState(false);
   const [windowWidth] = useViewport();
+
+  const dispatch = useDispatch();
+
+  const handleSetMovie = (movie) => {
+    dispatch(setMovieDetail(movie));
+  };
 
   const handleScrollRight = () => {
     const maxScrollLeft =
@@ -87,7 +95,7 @@ export default function MoviesRow(props) {
         {movies &&
           movies.length > 0 &&
           movies.map((movie, index) => {
-            if (movie.poster_path && movie.backdrop_path !== null) { 
+            if (movie.poster_path && movie.backdrop_path !== null) {
               let imgURL = isOrigin
                 ? `https://image.tmdb.org/t/p/original/${movie.poster_path}`
                 : `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`;
@@ -97,14 +105,15 @@ export default function MoviesRow(props) {
                   className="movieItem"
                   ref={movieRef}
                   draggable={false}
+                  onClick={() => handleSetMovie(movie)}
                 >
                   <img src={imgURL} alt="poster" draggable={false} />
                   <div className="nameVi movieName">
                     {movie.title || movie.name}
                   </div>
-                  <div className="nameEng movieName">
+                  {/* <div className="nameEng movieName">
                     {movie.title || movie.name}
-                  </div>
+                  </div> */}
                 </div>
               );
             }
