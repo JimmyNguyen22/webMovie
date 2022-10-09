@@ -16,7 +16,7 @@ export default function Navbar(props) {
           : { backgroundColor: " rgb(17, 17, 17)" }
       }
     >
-      <div className="navContainer bg-transparent flex items-center flex-row justify-start h-full pl-8 sm:flex-col	">
+      <div className="navContainer bg-transparent flex items-center w-full flex-row justify-start h-full pl-8 sm:flex-col	">
         <div className="logo w-32 cursor-pointer">
           <img src={loGo} alt="logo" className="w-full" />
         </div>
@@ -32,6 +32,17 @@ export default function Navbar(props) {
             focus:pl-7 focus:w-80 focus:cursor-text	focus:opacity-100 focus:rounded-md"
           />
         </div>
+        <ul className="navList flex ml-9 ">
+          <li className="navItem">
+            <a href="#">Home</a>
+          </li>
+          <li className="navItem">
+            <a href="#">Movies</a>
+          </li>
+          <li className="navItem">
+            <a href="#">TV Shows</a>
+          </li>
+        </ul>
       </div>
     </div>
   );

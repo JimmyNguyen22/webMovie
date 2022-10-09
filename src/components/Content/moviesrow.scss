@@ -18,7 +18,9 @@
     overflow: hidden;
     padding: 28px 0;
     scroll-behavior: smooth;
-
+    &:hover .movieItem {
+      opacity: 0.5;
+    }
     .movieItem {
       transform: scale(1);
       max-width: 218px;
@@ -54,8 +56,8 @@
       z-index: 2;
       cursor: pointer;
       background-color: rgba(0, 0, 0, 0.5);
-      height: 100px;
-      width: 50px;
+      height: 50px;
+      width: 40px;
       border-radius: 4px;
       display: flex;
       align-items: center;
@@ -73,7 +75,13 @@
         font-size: 50px;
         transition: all 0.3s linear;
       }
+
+      &.isOrigin {
+        height: 80px;
+        width: max-content;
+      }
     }
+
     .btnRight {
       position: absolute;
       top: 50%;
@@ -81,8 +89,8 @@
       z-index: 2;
       cursor: pointer;
       background-color: rgba(0, 0, 0, 0.5);
-      height: 100px;
-      width: 50px;
+      height: 50px;
+      width: 40px;
       border-radius: 4px;
       display: flex;
       align-items: center;
@@ -98,6 +106,10 @@
         opacity: 0.7;
         font-size: 50px;
         transition: all 0.3s linear;
+      }
+      &.isOrigin {
+        height: 80px;
+        width: max-content;
       }
     }
   }

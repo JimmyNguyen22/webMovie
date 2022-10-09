@@ -3,13 +3,24 @@
 .navbar {
   transition: all 0.5s linear;
   .navContainer {
-    color: green !important;
     .navSearch {
       .iconSearch {
       }
       input {
         transition: width 0.5s linear;
         background-color: $bg-dark;
+      }
+    }
+    .navList {
+      color: $color-light;
+      font-size: 30px;
+      font-weight: 500;
+      width: 500px;
+      justify-content: space-around;
+      .navItem {
+        &:hover {
+          color: red;
+        }
       }
     }
   }
