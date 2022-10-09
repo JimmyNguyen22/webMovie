@@ -16,7 +16,7 @@ export default function Navbar(props) {
           : { backgroundColor: " rgb(17, 17, 17)" }
       }
     >
-      <div className="navContainer bg-transparent flex items-center flex-row justify-start h-full sm:flex-col	">
+      <div className="navContainer bg-transparent flex items-center flex-row justify-start h-full pl-8 sm:flex-col	">
         <div className="logo w-32 cursor-pointer">
           <img src={loGo} alt="logo" className="w-full" />
         </div>
