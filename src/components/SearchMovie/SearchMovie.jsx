@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 import { useViewport } from "../hooks/useViewport";
+import { getSearchMovies, setMovieDetail } from "../Store/actions/action";
 import "./searchmovie.scss";
+
+const useQuery = () => new URLSearchParams(useLocation().search);
 
 export default function SearchMovie(props) {
   const [windowWidth] = useViewport();
 
+  const dispatch = useDispatch();
+  const { SearchMovies } = useSelector((state) => state.infoMovies);
+  const keywords = useQuery().get("keywords");
+
+  useEffect(() => {
+    if (keywords) dispatch(getSearchMovies(keywords));
+  }, [keywords, dispatch]);
+
   return (
     <div className="searchMovie">
-      {/* {movieList && movieList.length > 0 ? (
+      {SearchMovies && SearchMovies.length > 0 ? (
         <div
           className="searchContent"
           style={{
@@ -24,18 +37,29 @@ export default function SearchMovie(props) {
             },auto)`,
           }}
         >
-          {movieList.map((movie, index) => (
-            <div className="movieItem" key={index}>
-              <img src="" alt="..." />
-              <span>Movie name</span>
-            </div>
-          ))}
+          {SearchMovies.map((movie, index) => {
+            if (movie.backdrop_path !== null && movie.media_type !== "person") {
+              const imgURL = `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`;
+              return (
+                <div
+                  className="movieItem"
+                  key={index}
+                  onClick={() => {
+                    dispatch(setMovieDetail(movie));
+                  }}
+                >
+                  <img src={imgURL} alt="..." />
+                  <span>{movie.name || movie.title}</span>
+                </div>
+              );
+            }
+          })}
         </div>
       ) : (
         <div className="searchError">
-          <h1>Your search for "asdcsa" did not have any matches.</h1>
+          <h1>Your search for "{keywords}" did not have any matches.</h1>
         </div>
-      )} */}
+      )}
     </div>
   );
 }

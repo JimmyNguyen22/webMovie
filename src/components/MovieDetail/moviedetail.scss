@@ -46,7 +46,7 @@ $color-dark: rgb(23, 24, 24);
       position: relative;
       width: 70%;
       height: 100%;
-      background: linear-gradient(90deg, rgba(0, 0, 0, 0.94) 60% transparent);
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.94) 60%, transparent);
       @media screen and (max-width: 1184px) {
         background: linear-gradient(
           90deg,
@@ -76,9 +76,8 @@ $color-dark: rgb(23, 24, 24);
         width: 65%;
         height: 100%;
         padding: 30px 0 0 24px;
-        color: $color-light;
         font-size: 20px;
-
+        color: #fff;
         @media screen and (max-width: 600px) {
           font-size: 16px;
           width: 80%;
@@ -86,6 +85,8 @@ $color-dark: rgb(23, 24, 24);
 
         .movieTitle {
           margin-top: 30px;
+          font-weight: 700;
+          font-size: 40px;
         }
         .statistical {
           margin-top: 20px;
@@ -105,9 +106,9 @@ $color-dark: rgb(23, 24, 24);
 
         .overview {
           margin-top: 20px;
-          color: rgba(255, 255, 255, 0.6);
           line-height: 1.4;
           font-size: 18px;
+          color: $color-light;
           @media screen and (max-width: 678px) {
             font-size: 14px;
           }

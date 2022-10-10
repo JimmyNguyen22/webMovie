@@ -20,7 +20,7 @@ export default function Intro(props) {
         <source src={video} type="video/mp4"></source>
       </video>
       <div className="introInfo">
-        <h1 className="heading">This is title web</h1>
+        <h1 className="heading">web movie clone</h1>
         <p className="overview">This is intro web !!! </p>
       </div>
       {isMuted ? (

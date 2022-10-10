@@ -24,7 +24,7 @@ export default function MovieDetail(props) {
         style={
           movie
             ? {
-                backgroundImage: `url(https://image.tmdb.orb/t/p/original/${
+                backgroundImage: `url(https://image.tmdb.org/t/p/original/${
                   movie.backdrop_path || movie.poster_path
                 })`,
                 backgroundSize: "cover",
@@ -41,7 +41,9 @@ export default function MovieDetail(props) {
               <span className="rating">
                 Rating: {movie && movie.vote_average * 10}%
               </span>
-              <span className="popular">Popular: {movie && movie.popular}</span>
+              <span className="popular">
+                Popular: {movie && movie.popularity}
+              </span>
             </p>
             <p className="releaseDate">
               Release Date:{" "}

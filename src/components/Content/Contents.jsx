@@ -52,7 +52,7 @@ export default function Contents(props) {
       <MoviesRow movies={Romance} title="Romance"></MoviesRow>
       <MoviesRow movies={Documentaries} title="Documentaries"></MoviesRow>
       <div
-        className="goTop"
+        className="goTop cursor-pointer"
         onClick={() => ScrollToTop()}
         style={{
           visibility: `${scrollY > 600 ? "visible" : "hidden"}`,

@@ -96,3 +96,14 @@ export const getDocumentaries = () => async (dispatch) => {
 export const setMovieDetail = (movie) => (dispatch) => {
   dispatch({ type: Types.SET_MOVIE_DETAIL, payload: movie });
 };
+
+export const getSearchMovies = (keywords) => async (dispatch) => {
+  try {
+    const result = await axios.get(
+      `${BASE_URL}/search/movie?api_key=${API_KEY}&language=en-US&include_adult=false&query=${keywords}`
+    );
+    dispatch({ type: Types.GET_SEARCH_MOVIES, payload: result.data.results });
+  } catch (error) {
+    console.log("get search api error", error);
+  }
+};

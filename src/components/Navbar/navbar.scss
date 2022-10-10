@@ -3,12 +3,16 @@
 .navbar {
   transition: all 0.5s linear;
   .navContainer {
+    .logo{
+        max-width: 150px;
+    }
     .navSearch {
       .iconSearch {
       }
       input {
         transition: width 0.5s linear;
         background-color: $bg-dark;
+        color: $color-light;
       }
     }
     .navList {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Contents from "../Content/Contents";
 import Intro from "../Intro/Intro";
-import MovieDetail from "../MovieDetail/MovieDetail";
+import MovieDetail from "../MovieDetail/MovieDetails";
 
 export default function Home() {
   const { MovieDetails } = useSelector((state) => state.infoMovies);

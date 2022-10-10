@@ -66,11 +66,11 @@ export default function MoviesRow(props) {
   };
 
   return (
-    <div className="content" draggable={false}>
+    <div className="content" draggable="false">
       <h1 className="heading">{title}</h1>
       <div
         ref={sliderRef}
-        draggable={true}
+        draggable="true"
         onDragStart={onDragStart}
         onDragEnd={onDragEnd}
         onDragEnter={onDragEnter}
@@ -104,10 +104,10 @@ export default function MoviesRow(props) {
                   key={index}
                   className="movieItem"
                   ref={movieRef}
-                  draggable={false}
+                  draggable="false"
                   onClick={() => handleSetMovie(movie)}
                 >
-                  <img src={imgURL} alt="poster" draggable={false} />
+                  <img src={imgURL} alt="poster" draggable="false" />
                   <div className="nameVi movieName">
                     {movie.title || movie.name}
                   </div>
