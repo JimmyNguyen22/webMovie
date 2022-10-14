@@ -3,9 +3,8 @@ import { useDispatch } from "react-redux";
 import { setMovieDetail } from "../Store/actions/action";
 import "./moviedetail.scss";
 import moment from "moment";
-import { MdClose } from "react-icons/md";
 
-export default function MovieDetail(props) {
+export default function MovieDetails(props) {
   const { movie, showModal } = props;
   const dispatch = useDispatch();
 
@@ -46,13 +45,10 @@ export default function MovieDetail(props) {
               </span>
             </p>
             <p className="releaseDate">
-              Release Date:{" "}
+              Release Date:
               {movie &&
                 (moment(movie.release_date).format("DD/MM/YYYY") ||
                   moment(movie.first_air_date).format("DD/MM/YYYY"))}
-            </p>
-            <p className="runtime">
-              Runtime: {movie && (movie.runtime || movie.episode_run_time)}
             </p>
             <p className="overview">{movie && movie.overview}</p>
           </div>

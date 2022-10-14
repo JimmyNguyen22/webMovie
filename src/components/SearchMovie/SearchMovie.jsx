@@ -42,7 +42,7 @@ export default function SearchMovie(props) {
               const imgURL = `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`;
               return (
                 <div
-                  className="movieItem"
+                  className="movieItem cursor-pointer"
                   key={index}
                   onClick={() => {
                     dispatch(setMovieDetail(movie));

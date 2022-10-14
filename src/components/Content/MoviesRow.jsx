@@ -16,8 +16,8 @@ export default function MoviesRow(props) {
   const [dragMove, setDragMove] = useState(0);
   const [isDrag, setIsDrag] = useState(false);
   const [windowWidth] = useViewport();
-
-  const dispatch = useDispatch();
+   
+  const dispatch = useDispatch(); 
 
   const handleSetMovie = (movie) => {
     dispatch(setMovieDetail(movie));
@@ -102,7 +102,7 @@ export default function MoviesRow(props) {
               return (
                 <div
                   key={index}
-                  className="movieItem"
+                  className="movieItem cursor-pointer"
                   ref={movieRef}
                   draggable="false"
                   onClick={() => handleSetMovie(movie)}
